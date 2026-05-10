@@ -73,22 +73,4 @@ router.post('/login', async (req, res) => {
     } catch (error) {
         res.status(500).json({ message: 'Server error', error: error.message });
     }
-});
-
-// Get current user
-router.get('/me', auth, async (req, res) => {
-    try {
-        res.json({
-            id: req.user._id,
-            name: req.user.name,
-            email: req.user.email,
-            role: req.user.role,
-            phone: req.user.phone,
-            vehicleNumber: req.user.vehicleNumber
-        });
-    } catch (error) {
-        res.status(500).json({ message: 'Server error', error: error.message });
-    }
-});
-
-module.exports = router;
+})
