@@ -1,49 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { chatWithAI } from '../utils/api';
 
-function Chatbot() {
-    const [isOpen, setIsOpen] = useState(false);
-    const [messages, setMessages] = useState([
-        { role: 'model', content: "👋 Hi! I'm ParkBot, your smart parking assistant. Ask me about availability, pricing, or best times to park!" }
-    ]);
-    const [input, setInput] = useState('');
-    const [loading, setLoading] = useState(false);
-    const messagesEndRef = useRef(null);
 
-    useEffect(() => {
-        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-    }, [messages]);
-
-    const sendMessage = async (e) => {
-        e.preventDefault();
-        if (!input.trim() || loading) return;
-
-        const userMsg = input.trim();
-        setInput('');
-        setMessages(prev => [...prev, { role: 'user', content: userMsg }]);
-        setLoading(true);
-
-        try {
-            const history = messages.map(m => ({
-                role: m.role === 'model' ? 'model' : 'user',
-                content: m.content
-            }));
-
-            const res = await chatWithAI({ message: userMsg, history });
-            setMessages(prev => [...prev, { role: 'model', content: res.data.message }]);
-        } catch (err) {
-            setMessages(prev => [...prev, { role: 'model', content: '❌ Sorry, I encountered an error. Please try again.' }]);
-        } finally {
-            setLoading(false);
-        }
-    };
-
-    const quickQuestions = [
-        'Is parking available?',
-        'What are the charges?',
-        'Best time to park?',
-        'How to book a slot?'
-    ];
 
     return (
         <div className={`chatbot-container ${isOpen ? 'open' : ''}`}>
