@@ -44,34 +44,5 @@ import { chatWithAI } from '../utils/api';
                         <div ref={messagesEndRef} />
                     </div>
 
-                    {/* Quick Questions */}
-                    {messages.length <= 1 && (
-                        <div className="quick-questions">
-                            {quickQuestions.map((q, i) => (
-                                <button key={i} className="quick-q-btn" onClick={() => { setInput(q); }}>
-                                    {q}
-                                </button>
-                            ))}
-                        </div>
-                    )}
-
-                    {/* Input */}
-                    <form onSubmit={sendMessage} className="chatbot-input">
-                        <input
-                            type="text"
-                            value={input}
-                            onChange={(e) => setInput(e.target.value)}
-                            placeholder="Ask ParkBot anything..."
-                            disabled={loading}
-                        />
-                        <button type="submit" disabled={loading || !input.trim()}>
-                            ➤
-                        </button>
-                    </form>
-                </div>
-            )}
-        </div>
-    );
-}
 
 export default Chatbot;
