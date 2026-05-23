@@ -133,34 +133,7 @@ function EntryExit() {
                                         <span>Duration</span>
                                         <strong>{result.receipt.duration}</strong>
                                     </div>
-                                    <hr />
-                                    <div className="detail-row">
-                                        <span>Base Rate</span>
-                                        <strong>{result.receipt.baseRate}</strong>
-                                    </div>
-                                    <div className="detail-row">
-                                        <span>Hourly Charge</span>
-                                        <strong>{result.receipt.hourlyCharge}</strong>
-                                    </div>
-                                    <div className="detail-row">
-                                        <span>Pricing Multiplier</span>
-                                        <strong>{result.receipt.pricingMultiplier}</strong>
-                                    </div>
-                                    <div className="detail-row total">
-                                        <span>TOTAL FEE</span>
-                                        <strong>{result.receipt.totalFee}</strong>
-                                    </div>
-                                </div>
-                            </div>
-                            <p className="result-message">Thank you for using Smart Parking! 🚗</p>
-                        </>
-                    )}
-                    <button onClick={reset} className="btn btn-secondary">
-                        Process Another Vehicle
-                    </button>
-                </div>
-            )}
-        </div>
+                                
     );
 }
 
