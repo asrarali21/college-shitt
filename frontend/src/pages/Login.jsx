@@ -41,32 +41,4 @@ function Login({ onLogin }) {
                             placeholder="Enter your email"
                             required
                         />
-                    </div>
-                    <div className="form-group">
-                        <label>Password</label>
-                        <input
-                            type="password"
-                            value={form.password}
-                            onChange={(e) => setForm({ ...form, password: e.target.value })}
-                            placeholder="Enter your password"
-                            required
-                        />
-                    </div>
-                    <button type="submit" className="btn btn-primary" disabled={loading}>
-                        {loading ? 'Signing in...' : 'Sign In'}
-                    </button>
-                    <p className="auth-switch">
-                        Don't have an account? <Link to="/register">Register</Link>
-                    </p>
-                    <div className="demo-credentials">
-                        <p><strong>Demo Accounts:</strong></p>
-                        <p>User: user@parking.com / user123</p>
-                        <p>Admin: admin@parking.com / admin123</p>
-                    </div>
-                </form>
-            </div>
-        </div>
-    );
-}
 
-export default Login;
