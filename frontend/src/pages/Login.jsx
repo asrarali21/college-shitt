@@ -21,24 +21,5 @@ function Login({ onLogin }) {
         }
     };
 
-    return (
-        <div className="auth-page">
-            <div className="auth-container">
-                <div className="auth-header">
-                    <div className="auth-logo">🅿️</div>
-                    <h1>Smart Parking</h1>
-                    <p>AI-Powered Urban Parking Management</p>
-                </div>
-                <form onSubmit={handleSubmit} className="auth-form">
-                    <h2>Welcome Back</h2>
-                    {error && <div className="error-msg">{error}</div>}
-                    <div className="form-group">
-                        <label>Email</label>
-                        <input
-                            type="email"
-                            value={form.email}
-                            onChange={(e) => setForm({ ...form, email: e.target.value })}
-                            placeholder="Enter your email"
-                            required
-                        />
-
+    
+    
