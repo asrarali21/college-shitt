@@ -73,47 +73,7 @@ function MyBookings({ user }) {
                                     <div className="info-item">
                                         <span className="label">Slot</span>
                                         <span className="value">{booking.slot?.slotNumber || 'N/A'}</span>
-                                    </div>
-                                    <div className="info-item">
-                                        <span className="label">Floor</span>
-                                        <span className="value">{booking.slot?.floor || 'N/A'}</span>
-                                    </div>
-                                    <div className="info-item">
-                                        <span className="label">Vehicle</span>
-                                        <span className="value">{booking.vehicleNumber || 'N/A'}</span>
-                                    </div>
-                                    {booking.entryTime && (
-                                        <div className="info-item">
-                                            <span className="label">Entry</span>
-                                            <span className="value">{new Date(booking.entryTime).toLocaleString()}</span>
-                                        </div>
-                                    )}
-                                    {booking.exitTime && (
-                                        <div className="info-item">
-                                            <span className="label">Exit</span>
-                                            <span className="value">{new Date(booking.exitTime).toLocaleString()}</span>
-                                        </div>
-                                    )}
-                                    {booking.totalFee > 0 && (
-                                        <div className="info-item">
-                                            <span className="label">Fee</span>
-                                            <span className="value fee">₹{booking.totalFee}</span>
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
-                            <div className="booking-card-actions">
-                                {booking.qrCode && (
-                                    <button className="btn btn-sm btn-secondary" onClick={() => setSelectedQR(selectedQR === booking._id ? null : booking._id)}>
-                                        {selectedQR === booking._id ? 'Hide QR' : 'Show QR'}
-                                    </button>
-                                )}
-                                {booking.status === 'booked' && (
-                                    <button className="btn btn-sm btn-danger" onClick={() => handleCancel(booking._id)}>
-                                        Cancel
-                                    </button>
-                                )}
-                            </div>
+
                             {selectedQR === booking._id && booking.qrCode && (
                                 <div className="qr-popup">
                                     <img src={booking.qrCode} alt="QR Code" className="qr-image" />
