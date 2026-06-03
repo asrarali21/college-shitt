@@ -105,36 +105,4 @@ function EntryExit() {
                         </>
                     ) : (
                         <>
-                            <div className="result-icon receipt">🧾</div>
-                            <h2>Parking Receipt</h2>
-                            <div className="receipt-card">
-                                <div className="receipt-header">
-                                    <h3>Smart Parking</h3>
-                                    <p>AI-Powered Parking Management</p>
-                                </div>
-                                <div className="receipt-body">
-                                    <div className="detail-row">
-                                        <span>Booking Code</span>
-                                        <strong>{result.receipt.bookingCode}</strong>
-                                    </div>
-                                    <div className="detail-row">
-                                        <span>Slot</span>
-                                        <strong>{result.receipt.slot} (Floor {result.receipt.floor})</strong>
-                                    </div>
-                                    <div className="detail-row">
-                                        <span>Entry</span>
-                                        <strong>{new Date(result.receipt.entryTime).toLocaleString()}</strong>
-                                    </div>
-                                    <div className="detail-row">
-                                        <span>Exit</span>
-                                        <strong>{new Date(result.receipt.exitTime).toLocaleString()}</strong>
-                                    </div>
-                                    <div className="detail-row">
-                                        <span>Duration</span>
-                                        <strong>{result.receipt.duration}</strong>
-                                    </div>
-                                
-    );
-}
-
-export default EntryExit;
+                            <
