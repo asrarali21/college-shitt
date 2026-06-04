@@ -59,30 +59,7 @@ function MyBookings({ user }) {
                     <p>Book your first parking slot to see it here!</p>
                 </div>
             ) : (
-                <div className="bookings-list">
-                    {bookings.map((booking) => (
-                        <div key={booking._id} className="booking-card glass-card">
-                            <div className="booking-card-header">
-                                <span className="booking-code-display">{booking.bookingCode}</span>
-                                <span className={`status-badge ${getStatusColor(booking.status)}`}>
-                                    {booking.status.toUpperCase()}
-                                </span>
-                            </div>
-                            <div className="booking-card-body">
-                                <div className="booking-info-grid">
-                                    <div className="info-item">
-                                        <span className="label">Slot</span>
-                                        <span className="value">{booking.slot?.slotNumber || 'N/A'}</span>
 
-                            {selectedQR === booking._id && booking.qrCode && (
-                                <div className="qr-popup">
-                                    <img src={booking.qrCode} alt="QR Code" className="qr-image" />
-                                    <p className="qr-hint">Show this QR code at the entry gate</p>
-                                </div>
-                            )}
-                        </div>
-                    ))}
-                </div>
             )}
         </div>
     );
