@@ -159,40 +159,7 @@ function AdminDashboard() {
             </div>
 
             {/* Recent Bookings Table */}
-            <div className="glass-card">
-                <h2>📋 Recent Bookings</h2>
-                {stats.recentBookings.length > 0 ? (
-                    <div className="table-container">
-                        <table className="data-table">
-                            <thead>
-                                <tr>
-                                    <th>Code</th>
-                                    <th>User</th>
-                                    <th>Slot</th>
-                                    <th>Status</th>
-                                    <th>Fee</th>
-                                    <th>Date</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {stats.recentBookings.map((b) => (
-                                    <tr key={b._id}>
-                                        <td><span className="booking-code-sm">{b.bookingCode}</span></td>
-                                        <td>{b.user?.name || 'N/A'}</td>
-                                        <td>{b.slot?.slotNumber || 'N/A'}</td>
-                                        <td><span className={`status-badge ${b.status}`}>{b.status}</span></td>
-                                        <td>{b.totalFee > 0 ? `₹${b.totalFee}` : '-'}</td>
-                                        <td>{new Date(b.createdAt).toLocaleDateString()}</td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
-                ) : (
-                    <p className="no-data">No bookings yet</p>
-                )}
-            </div>
-        </div>
+            
     );
 }
 
