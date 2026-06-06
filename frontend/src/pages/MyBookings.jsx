@@ -46,23 +46,7 @@ function MyBookings({ user }) {
     }
 
     return (
-        <div className="my-bookings-page">
-            <div className="page-header">
-                <h1>📋 My Bookings</h1>
-                <p>{bookings.length} total bookings</p>
-            </div>
-
-            {bookings.length === 0 ? (
-                <div className="empty-state glass-card">
-                    <span className="empty-icon">🅿️</span>
-                    <h3>No bookings yet</h3>
-                    <p>Book your first parking slot to see it here!</p>
-                </div>
-            ) : (
-
-            )}
-        </div>
-    );
+        <div 
 }
 
 export default MyBookings;
