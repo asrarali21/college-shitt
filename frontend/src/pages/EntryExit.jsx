@@ -82,27 +82,8 @@ function EntryExit() {
                     </form>
                 </div>
             ) : (
-                <div className="gate-result glass-card">
-                    {mode === 'entry' ? (
-                        <>
-                            <div className="result-icon success">✅</div>
-                            <h2>Entry Recorded!</h2>
-                            <div className="result-details">
-                                <div className="detail-row">
-                                    <span>Booking Code</span>
-                                    <strong>{result.booking.bookingCode}</strong>
-                                </div>
-                                <div className="detail-row">
-                                    <span>Slot</span>
-                                    <strong>{result.booking.slot} (Floor {result.booking.floor})</strong>
-                                </div>
-                                <div className="detail-row">
-                                    <span>Entry Time</span>
-                                    <strong>{new Date(result.booking.entryTime).toLocaleString()}</strong>
-                                </div>
-                            </div>
-                            <p className="result-message">Your vehicle is now parked. Drive safely!</p>
-                        </>
+                
+            
                     ) : (
                         <>
                             <
