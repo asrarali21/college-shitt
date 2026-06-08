@@ -50,29 +50,7 @@ function App() {
 
   return (
     <Router>
-      {user && <Navbar user={user} onLogout={handleLogout} />}
-      <div className="app-container">
-        <Routes>
-          <Route
-            path="/login"
-            element={!user ? <Login onLogin={handleLogin} /> : <Navigate to="/" />}
-          />
-          <Route
-            path="/register"
-            element={!user ? <Register onLogin={handleLogin} /> : <Navigate to="/" />}
-          />
-          <Route
-            path="/"
-            element={user ? (user.role === 'admin' ? <Navigate to="/admin" /> : <Dashboard user={user} />) : <Navigate to="/login" />}
-          />
-          <Route
-            path="/book"
-            element={user ? <BookSlot user={user} /> : <Navigate to="/login" />}
-          />
-          <Route
-            path="/my-bookings"
-            element={user ? <MyBookings user={user} /> : <Navigate to="/login" />}
-          />
+      
           <Route
             path="/entry-exit"
             element={user ? <EntryExit /> : <Navigate to="/login" />}
