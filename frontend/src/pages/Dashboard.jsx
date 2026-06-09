@@ -84,32 +84,7 @@
 
                     {/* Pricing Card */}
                     {pricing && (
-                        <div className="glass-card ai-card pricing-card">
-                            <div className="ai-card-header">
-                                <span className="ai-badge">Dynamic Pricing</span>
-                                <span className={`pricing-badge ${pricing.level}`}>{pricing.level?.toUpperCase()}</span>
-                            </div>
-                            <div className="pricing-details">
-                                <div className="price-multiplier">
-                                    <span className="multiplier-value">{pricing.multiplier}x</span>
-                                    <span className="multiplier-label">Price Multiplier</span>
-                                </div>
-                                <div className="price-breakdown">
-                                    <div className="price-item">
-                                        <span>Base Rate</span>
-                                        <span>₹{pricing.baseRate}</span>
-                                    </div>
-                                    <div className="price-item">
-                                        <span>Hourly Rate</span>
-                                        <span>₹{pricing.effectiveHourlyRate}/hr</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="ai-suggestion">{pricing.reason}</div>
-                        </div>
-                    )}
-                </div>
-            </div>
+                        <
 
             {/* Smart Suggestions */}
             {suggestions.length > 0 && (
