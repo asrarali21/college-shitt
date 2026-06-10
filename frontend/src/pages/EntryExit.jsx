@@ -55,14 +55,7 @@ function EntryExit() {
             </div>
 
             {!result ? (
-                <div className="gate-simulation glass-card">
-                    <div className="gate-icon">
-                        {mode === 'entry' ? '🚧' : '🏁'}
-                    </div>
-                    <h2>{mode === 'entry' ? 'Entry Gate' : 'Exit Gate'}</h2>
-                    <p>{mode === 'entry' ? 'Scan QR code or enter booking code to enter' : 'Scan QR code or enter booking code to exit and get receipt'}</p>
-
-                    {error && <div className="error-msg">{error}</div>}
+  
 
                     <form onSubmit={handleSubmit} className="gate-form">
                         <div className="form-group">
